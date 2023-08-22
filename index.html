@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Product Slider Like Flipkart</title>
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<div class="container">
+		<ul class="thumb">
+			<li>
+			    <a href="image/image1.jpg" target="imgBox">
+			         <img src="image/image1.jpg" alt="">
+			    </a>
+			</li>
+			<li>
+			     <a href="image/image2.jpg" target="imgBox">
+			          <img src="image/image2.jpg" alt="">
+			     </a>
+			</li>
+			<li>
+			      <a href="image/image3.jpg" target="imgBox">
+			            <img src="image/image3.jpg" alt="">
+			      </a>
+			</li>
+			<li>
+			      <a href="image/image4.jpg" target="imgBox">
+			            <img src="image/image4.jpg" alt="">
+			      </a>
+			</li>
+			<li>
+			      <a href="image/image5.jpg" target="imgBox">
+			            <img src="image/image5.jpg" alt="">
+			      </a>
+			</li>
+		</ul>
+		<div class="imgBox"><img src="image/image1.jpg" alt=""></div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript">
+	    $(document).ready(function(){
+			$('.thumb a').mouseover(function(e){
+				e.preventDefault();
+				$('.imgBox img').attr("src", $(this).attr("href"));
+			})
+		})
+	</script>
+</body>
+</html>
